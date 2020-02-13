@@ -32,10 +32,24 @@ private:
 
 
 
-
 int main(){
-    Person p1("Swastik",18);
-    Person p2("Priyanka",16);
+    
+    string a1;
+    string a2;
+int b1;
+int b2;
+
+cout<<"Enter the first name:"<<endl;
+cin>>a1;
+
+cout<<"Enter the first age:"<<endl;
+cin>>b1;
+cout<<"Enter the second name:"<<endl;
+cin>>a2;
+cout<<"Enter the second age:"<<endl;
+cin>>b2;
+    Person p1(a1,b1);
+    Person p2(a2,b2);
     cout<<p1.getName()<<" loves "<<p2.getName()<<endl;
     cout<<"They are "<<p1.getAge()<<" and "<<p2.getAge()<<" years old so the marriage will be satisfing."<<endl;
     

@@ -51,6 +51,12 @@ cin>>b2;
     Person p1(a1,b1);
     Person p2(a2,b2);
     cout<<p1.getName()<<" loves "<<p2.getName()<<endl;
+    if(p1.getAge() >= p2.getAge()){
     cout<<"They are "<<p1.getAge()<<" and "<<p2.getAge()<<" years old so the marriage will be satisfing."<<endl;
-    
+    } 
+
+    else{
+      cout<<"They are "<<p1.getAge()<<" and "<<p2.getAge()<<" years old so the marriage will not be satisfing."<<endl;
+
+    }
 }

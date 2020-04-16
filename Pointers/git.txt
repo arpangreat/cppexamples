@@ -1,0 +1,5 @@
+git add .
+git init
+git commit -m "My Commit"
+git remote add origin master https://github.com/arpangreat/anything.git
+git push -u origin master

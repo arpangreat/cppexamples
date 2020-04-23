@@ -47,83 +47,56 @@ void norCal(){
 }
 
 void matrix2(){
-	double matrix2arr[2][2];
-	double r1c1,r1c2,r2c1,r2c2;
-	r1c1 = matrix2arr[0][0];
-	r1c2 = matrix2arr[0][1];
-	r2c1 = matrix2arr[1][0];
-	r2c2 = matrix2arr[1][1];
-	cout<<"Enter Row1-Col1"<<endl;
-	cin>>r1c1;
-	cout<<"Enter Row1-Col2"<<endl;
-	cin>>r1c2;
-	cout<<"Enter Row2-Col1"<<endl;
-	cin>>r2c1;
-	cout<<"Enter Row2-Col2"<<endl;
-	cin>>r2c2;
+	double** m2arr = new double*[2];
+	for(int i=0;i<2;i++)
+	m2arr[i] = new double[2];
+	cout<<"Enter Row1-Col1 and Row1-Col2"<<endl;
+	cin>>m2arr[0][0]>>m2arr[0][1];
+	cout<<"Enter Row2-Col1 and Row2-Col2"<<endl;
+	cin>>m2arr[1][0]>>m2arr[1][1];
         int n;
 	cout<<"Enter 1 for normal and 2 for determinante"<<endl;
 	cin>>n;
 	switch(n){
 		case 1:
 		 cout<<" "<<endl;
-		 cout<<"| "<<r1c1<<" "<<r1c2<<" |"<<endl;
-		 cout<<"| "<<r2c1<<" "<<r2c2<<" |"<<endl;
+		 cout<<"| "<<m2arr[0][0]<<" "<<m2arr[0][1]<<" |"<<endl;
+		 cout<<"| "<<m2arr[1][0]<<" "<<m2arr[1][1]<<" |"<<endl;
 		 break;
 		case 2:
 		 cout<<"Your result of determinante of given Matrix is:"<<endl;
-		 cout<<((r1c1*r2c2)-(r1c2*r2c1))<<endl;
+		 cout<<((m2arr[0][0]*m2arr[1][1])-(m2arr[0][1]*m2arr[1][0]))<<endl;
 		 break;
 	}
 }
 
 void matrix3(){
-	double matrix3arr[3][3];
-	double r1c1,r1c2,r1c3,r2c1,r2c2,r2c3,r3c1,r3c2,r3c3;
-	r1c1 = matrix3arr[0][0];
-	r1c2 = matrix3arr[0][1];
-	r1c3 = matrix3arr[0][2];
-	r2c1 = matrix3arr[1][0];
- 	r2c2 = matrix3arr[1][1];
-	r2c3 = matrix3arr[1][2];
-	r3c1 = matrix3arr[2][0];
-	r3c2 = matrix3arr[2][1];
-        r3c3 = matrix3arr[2][2];
-
-	cout<<"Enter Row1-Col1"<<endl;
-	cin>>r1c1;
-	cout<<"Enter Row1-Col2"<<endl;
-	cin>>r1c2;
-	cout<<"Enter Row1-Col3"<<endl;
-	cin>>r1c3;
-	cout<<"Enter Row2-Col1"<<endl;
-	cin>>r2c1;
- 	cout<<"Enter Row2-Col2"<<endl;
-	cin>>r2c2;
-	cout<<"Enter Row2-Col3"<<endl;
-	cin>>r2c3;
-	cout<<"Enter Row3-Col1"<<endl;
-	cin>>r3c1;
-	cout<<"Enter Row3-Col2"<<endl;
-	cin>>r3c2;
-	cout<<"Enter Row3-Col3"<<endl;
-	cin>>r3c3;
+	double** m3r = new  double*[3];
+	for(int i=0;i<3;i++){
+		m3r[i] = new double[3];
+	}
+	cout<<"Enter Row1-Col1 and Row1-Col2 and Row1-Col3"<<endl;
+	cin>>m3r[0][0]>>m3r[0][1]>>m3r[0][2];
+	cout<<"Enter Row2-Col1 and Row2-Col2 and Row2-Col3"<<endl;
+	cin>>m3r[1][0]>>m3r[1][1]>>m3r[1][2];
+	cout<<"Enter Row3-Col1 and Row3-Col2 and Row3-Col3"<<endl;
+	cin>>m3r[2][0]>>m3r[2][1]>>m3r[2][2];
         int n;
 	cout<<"Enter 1 for normal and 2 for determinante"<<endl;
 	cin>>n;
-	double val1 = ((r2c2*r3c3)-(r2c3*r3c2));
-	double val2 = ((r2c1*r3c3)-(r2c3*r3c1));
-	double val3 = ((r2c1*r3c2)-(r3c1*r2c2));
+	double val1 = ((m3r[1][1]*m3r[2][2])-(m3r[1][2]*m3r[2][1]));
+	double val2 = ((m3r[1][0]*m3r[2][2])-(m3r[1][2]*m3r[2][0]));
+	double val3 = ((m3r[1][0]*m3r[2][1])-(m3r[2][0]*m3r[1][1]));
 	switch(n){
 		case 1:
 		 cout<<" "<<endl;
-		 cout<<"| "<<r1c1<<" "<<r1c2<<" "<<r1c2<<" |"<<endl;
-		 cout<<"| "<<r2c1<<" "<<r2c2<<" "<<r2c3<<" |"<<endl;
-		 cout<<"| "<<r3c1<<" "<<r3c2<<" "<<r3c3<<" |"<<endl;
+		 cout<<"| "<<m3r[0][0]<<" "<<m3r[0][1]<<" "<<m3r[0][2]<<" |"<<endl;
+		 cout<<"| "<<m3r[1][0]<<" "<<m3r[1][1]<<" "<<m3r[1][2]<<" |"<<endl;
+		 cout<<"| "<<m3r[2][0]<<" "<<m3r[2][1]<<" "<<m3r[2][2]<<" |"<<endl;
 		 break;
 		case 2:
 		 cout<<"Your result of determinante of given Matrix is:"<<endl;
-		 cout<<((r1c1*val1)-(r1c2*val2)+(r1c3*val3))<<endl;
+		 cout<<((m3r[0][0]*val1)-(m3r[0][1]*val2)+(m3r[0][2]*val3))<<endl;
 		 break;
 	}
 

@@ -33,7 +33,7 @@ void Kruskal(Edge *input,int n,int E){
 	while(count != n-1){
 		Edge currentEdge = input[i];
 
-          // check if we can add the currentEdge in MST or not
+          // Check if we can add the currentEdge in MST or not
 	  int sourceParent = findParent(currentEdge.source,parent);
 	  int destParent = findParent(currentEdge.dest,parent);
 

@@ -10,16 +10,7 @@ int main(){
     cin>>name;
     cout<<"Enter the age:"<<endl;
     cin>>age;
-    datab[name] = name;
-    datab[age] = age;
+    datab[name] = age;
 
-    cout<<datab[name]<<" "<<"is "<<datab[age]<<" "<<"years old"<<endl;
-
-
-
-
-
-
-
-    
+    cout<<datab[name]<<endl;
 }

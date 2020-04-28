@@ -3,9 +3,10 @@
 using namespace std;
 
 int findMinVertex(int* distance,bool* visited,int n){
- 	int minVertex = -1;
+
+	int minVertex = -1;
 	for(int i=0;i<n;i++){
-     if(!visited[i] && (minVertex == -1 || distance[i] < distance[minVertex])){
+	     if(!visited[i] && (minVertex == -1 || distance[i] < distance[minVertex])){
 		minVertex = i;
 		}
           }	

@@ -41,7 +41,7 @@ void norCal(){
       cout<<"The divi is "<<divi(x,y)<<endl;
       break;
     default:
-      cout<<"enter between 1-4."<<endl;    
+      cout<<"enter between 1-4."<<endl;
    }
 
 }
@@ -121,7 +121,7 @@ int main(){
             default:
 		break;
 
-	     
+
     }
    return 0;
 }

@@ -118,7 +118,7 @@ int main(){
 	    case 4:
 		break;
 
-            default:
+        default:
 		break;
 
 

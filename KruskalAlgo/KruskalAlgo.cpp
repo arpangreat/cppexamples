@@ -27,6 +27,7 @@ void Kruskal(Edge *input,int n,int E){
 	for(int i=0;i<n;i++){
 		parent[i] = i;
 	}
+    
 
 	int count = 0;
 	int i = 0;

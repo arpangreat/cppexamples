@@ -1,4 +1,5 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<algorithm>
 using namespace std;
 double sum(double a, double b){
    return a + b;
@@ -102,6 +103,7 @@ void matrix3(){
 
 }
 int main(){
+  while (true) {
     int x;
     cout<<"Enter 1 for normal calculator or 2 for (2*2) matrix calulator or 3 for (3*3) matrix calculator or 4 for quit"<<endl;
     cin>>x;
@@ -120,8 +122,7 @@ int main(){
 
         default:
 		break;
-
-
     }
+   }
    return 0;
 }

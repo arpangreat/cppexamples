@@ -4,13 +4,13 @@ using namespace std;
 
 int findMinVertex(int* distance,bool* visited,int n){
 
-	int minVertex = -1;
+	int MinVertex = -1;
 	for(int i=0;i<n;i++){
-	     if(!visited[i] && (minVertex == -1 || distance[i] < distance[minVertex])){
-		minVertex = i;
+	     if(!visited[i] && (MinVertex == -1 || distance[i] < distance[MinVertex])){
+		MinVertex = i;
 		}
-          }	
-	return minVertex;
+      }	
+	return MinVertex;
 }
 
 void dijkstra(int** edges,int n){
@@ -24,11 +24,11 @@ void dijkstra(int** edges,int n){
 
  distance[0] = 0;
  for(int i=0;i<n-1;i++){
-	 int minVertex = findMinVertex(distance,visited,n);
-	 visited[minVertex] = true;
+	 int MinVertex = findMinVertex(distance,visited,n);
+	 visited[MinVertex] = true;
 	 for(int j=0;j<n;j++){
-		 if(edges[minVertex][j] != 0 && !visited[j]){
-			 int dist = distance[minVertex] + edges[minVertex][j];
+		 if(edges[MinVertex][j] != 0 && !visited[j]){
+			 int dist = distance[MinVertex] + edges[MinVertex][j];
 			 if(dist < distance[j]){
 				 distance[j] = dist;
 			 }
@@ -71,4 +71,3 @@ int main(){
   }
   delete [] edges;
 }
-

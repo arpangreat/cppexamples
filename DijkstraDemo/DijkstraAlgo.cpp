@@ -5,13 +5,13 @@ using namespace std;
 
 int findMinVertex(int* distance,bool* visited,int n){
 
-	int MinVertex = -1;
-	for(int i=0;i<n;i++){
-	     if(!visited[i] && (MinVertex == -1 || distance[i] < distance[MinVertex])){
-		MinVertex = i;
-		}
-      }	
-	return MinVertex;
+    int MinVertex = -1;
+    for(int i=0;i<n;i++){
+         if(!visited[i] && (MinVertex == -1 || distance[i] < distance[MinVertex])){
+        MinVertex = i;
+        }
+      }
+    return MinVertex;
 }
 
 void dijkstra(int** edges,int n){

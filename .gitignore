@@ -1,3 +1,4 @@
-**/SimpleEq/Builds
-**/SimpleEq/JuceLibraryCode
-**/.DS_Store
+.DS_Store
+SimpleEq/Builds
+SimpleEq/JuceLibraryCode
+/dist

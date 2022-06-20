@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.8)
+project(HelloWorld)
+include_directories(include)
+file(GLOB_RECURSE SOURCES "src/*".cc)
+add_executable(Hello ${SOURCES})
+install(TARGETS Hello DESTINATION /usr/bin)

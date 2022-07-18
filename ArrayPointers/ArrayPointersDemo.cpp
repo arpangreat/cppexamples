@@ -9,6 +9,7 @@ int main(){
  cout<<*a<<endl;
  cout<<*(a+1)<<endl;
  cout<<1[a]<<endl;
+ cout
  cout<<5[a]<<endl;
  return 0;
 }

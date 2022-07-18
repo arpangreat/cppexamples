@@ -1,74 +1,74 @@
-#include<iostream>
-#include<climits>
-#include<algorithm>
+#include <algorithm>
+#include <climits>
+#include <iostream>
 using namespace std;
 
-int findMinVertex(int* distance,bool* visited,int n){
+int findMinVertex(int *distance, bool *visited, int n) {
 
-    int MinVertex = -1;
-    for(int i=0;i<n;i++){
-         if(!visited[i] && (MinVertex == -1 || distance[i] < distance[MinVertex])){
-        MinVertex = i;
+  int MinVertex = -1;
+  for (int i = 0; i < n; i++) {
+    if (!visited[i] && (MinVertex == -1 || distance[i] < distance[MinVertex])) {
+      MinVertex = i;
+    }
+  }
+  return MinVertex;
+}
+
+void dijkstra(int **edges, int n) {
+  int *distance = new int[n];
+  bool *visited = new bool[n];
+
+  for (int i = 0; i < n; i++) {
+    distance[i] = INT_MAX;
+    visited[i] = false;
+  }
+
+  distance[0] = 0;
+  for (int i = 0; i < n - 1; i++) {
+    int MinVertex = findMinVertex(distance, visited, n);
+    visited[MinVertex] = true;
+    for (int j = 0; j < n; j++) {
+      if (edges[MinVertex][j] != 0 && !visited[j]) {
+        int dist = distance[MinVertex] + edges[MinVertex][j];
+        if (dist < distance[j]) {
+          distance[j] = dist;
         }
       }
-    return MinVertex;
+    }
+  }
+  cout << endl;
+  for (int i = 0; i < n; i++) {
+    cout << i << " " << distance[i] << endl;
+  }
+  delete[] visited;
+  delete[] distance;
 }
 
-void dijkstra(int** edges,int n){
- int* distance = new int[n];
- bool* visited = new bool[n];
-
- for(int i=0;i<n;i++){
-	 distance[i] = INT_MAX;
-	 visited[i] = false;
- }
-
- distance[0] = 0;
- for(int i=0;i<n-1;i++){
-	 int MinVertex = findMinVertex(distance,visited,n);
-	 visited[MinVertex] = true;
-	 for(int j=0;j<n;j++){
-		 if(edges[MinVertex][j] != 0 && !visited[j]){
-			 int dist = distance[MinVertex] + edges[MinVertex][j];
-			 if(dist < distance[j]){
-				 distance[j] = dist;
-			 }
-		 }
-	 }
- }
- cout<<endl;
- for(int i=0;i<n;i++){
-	 cout<<i<<" "<<distance[i]<<endl;
- }
- delete [] visited;
- delete [] distance;
-}
-
-int main(){
+int main() {
 
   int n;
   int e;
-  cin>>n>>e;
-  int** edges = new int*[n];
-  for(int i=0;i<n;i++){
-	  edges[i] = new int[n];
-	  for(int j=0;j<n;j++){
-		  edges[i][j] = 0;
-	  }
+  cin >> n >> e;
+  int **edges = new int *[n];
+  for (int i = 0; i < n; i++) {
+    edges[i] = new int[n];
+    for (int j = 0; j < n; j++) {
+      edges[i][j] = 0;
+    }
   }
 
-  for(int i=0;i<e;i++){
-	  int f,s,weight;
-	  cin >> f >> s >> weight;
-	  edges[f][s] = weight;
-	  edges[s][f] = weight;
+  for (int i = 0; i < e; i++) {
+    int f, s, weight;
+    cin >> f >> s >> weight;
+    edges[f][s] = weight;
+    edges[s][f] = weight;
   }
 
-  cout<<endl;
-  dijkstra(edges,n);
+  cout << endl;
+  dijkstra(edges, n);
 
-  for(int i=0;i<n;i++){
-	  delete [] edges[i];
+  for (int i = 0; i < n; i++) {
+    delete[] edges[i];
   }
-  delete [] edges;
+  delete[] edges;
 }

@@ -1,16 +1,15 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int main(){
+int main() {
+  map<string, int> datab;
+  string name;
+  int age;
 
-    map<string,int> datab;
-    string name;
-    int age;
-   
-    cout<<"Enter the name:"<<endl;
-    cin>>name;
-    cout<<"Enter the age:"<<endl;
-    cin>>age;
-    datab[name] = age;
+  cout << "Enter the name:" << endl;
+  cin >> name;
+  cout << "Enter the age:" << endl;
+  cin >> age;
+  datab[name] = age;
 
-    cout<<datab[name]<<endl;
+  cout << datab[name] << endl;
 }

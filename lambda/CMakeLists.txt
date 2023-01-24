@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8.9)
+project(lambda)
+include_directories(include)
+file(GLOB_RECURSE SOURCES "src/*".cc)
+add_executable(lambda ${SOURCES})
+install(TARGETS lambda DESTINATION /usr/bin)

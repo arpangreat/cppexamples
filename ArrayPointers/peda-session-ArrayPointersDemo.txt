@@ -1,0 +1,3 @@
+break /home/arpangreat/cppexamples/ArrayPointers/ArrayPointersDemo.cpp:4
+break /home/arpangreat/cppexamples/ArrayPointers/ArrayPointersDemo.cpp:6
+

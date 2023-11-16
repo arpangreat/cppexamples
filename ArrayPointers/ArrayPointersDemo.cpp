@@ -2,16 +2,16 @@
 
 #include <iostream>
 
-using namespace std;
+// This is a comment
 int main() {
-  int a[10];
-  cout << a << endl;
-  cout << &a[0] << endl;
+  std::array<int, 10> a;
+  for (auto &elem : a) {
+    std::cout << elem << std::endl;
+  }
+  std::cout << &a[0] << std::endl;
   a[0] = 5;
   a[1] = 10;
-  cout << *a << endl;
-  cout << *(a + 1) << endl;
-  cout << 1 [a] << endl;
-  cout << 5 [a] << endl;
+  std::cout << a[1] << std::endl;
+  std::cout << a[5] << std::endl;
   return 0;
 }

@@ -92,7 +92,7 @@ printer_EXTERNAL_OBJECTS =
 
 bin/printer: CMakeFiles/printer.dir/fmtExs/printer.cpp.o
 bin/printer: CMakeFiles/printer.dir/build.make
-bin/printer: /usr/local/lib/libfmt.so.9.1.1
+bin/printer: /usr/local/lib/libfmt.so.10.1.1
 bin/printer: CMakeFiles/printer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/arpangreat/cppexamples/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bin/printer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/printer.dir/link.txt --verbose=$(VERBOSE)

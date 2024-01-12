@@ -1,10 +1,8 @@
 #include <algorithm>
 #include <climits>
 #include <iostream>
-using namespace std;
 
 int findMinVertex(int *distance, bool *visited, int n) {
-
   int MinVertex = -1;
   for (int i = 0; i < n; i++) {
     if (!visited[i] && (MinVertex == -1 || distance[i] < distance[MinVertex])) {
@@ -36,19 +34,18 @@ void dijkstra(int **edges, int n) {
       }
     }
   }
-  cout << endl;
+  std::cout << std::endl;
   for (int i = 0; i < n; i++) {
-    cout << i << " " << distance[i] << endl;
+    std::cout << i << " " << distance[i] << std::endl;
   }
   delete[] visited;
   delete[] distance;
 }
 
 int main() {
-
   int n;
   int e;
-  cin >> n >> e;
+  std::cin >> n >> e;
   int **edges = new int *[n];
   for (int i = 0; i < n; i++) {
     edges[i] = new int[n];
@@ -59,12 +56,12 @@ int main() {
 
   for (int i = 0; i < e; i++) {
     int f, s, weight;
-    cin >> f >> s >> weight;
+    std::cin >> f >> s >> weight;
     edges[f][s] = weight;
     edges[s][f] = weight;
   }
 
-  cout << endl;
+  std::cout << std::endl;
   dijkstra(edges, n);
 
   for (int i = 0; i < n; i++) {

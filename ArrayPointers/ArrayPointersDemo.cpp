@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 
 #include <iostream>
+#include <ostream>
 
 // This is a comment
 int main() {

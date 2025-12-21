@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/printer.dir/link.d"
   "CMakeFiles/printer.dir/fmtExs/printer.cpp.o"
   "CMakeFiles/printer.dir/fmtExs/printer.cpp.o.d"
   "bin/printer"

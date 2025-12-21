@@ -1,7 +1,6 @@
 set(files fmtExs)
 cmake_minimum_required(VERSION 3.24)
 
-
 foreach(file ${files})
     message("Filename: ${file}")
 endforeach()

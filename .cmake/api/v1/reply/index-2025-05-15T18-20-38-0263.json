@@ -15,11 +15,11 @@
 		},
 		"version" : 
 		{
-			"isDirty" : false,
-			"major" : 3,
-			"minor" : 27,
-			"patch" : 9,
-			"string" : "3.27.9",
+			"isDirty" : true,
+			"major" : 4,
+			"minor" : 0,
+			"patch" : 2,
+			"string" : "4.0.2-dirty",
 			"suffix" : ""
 		}
 	},

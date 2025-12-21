@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/printer.dir/fmtExs/printer.cpp.o -o bin/printer  -Wl,-rpath,/usr/local/lib /usr/local/lib/libfmt.so.10.1.1 
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/printer.dir/link.d CMakeFiles/printer.dir/fmtExs/printer.cpp.o -o bin/printer  /usr/lib/libfmt.so.11.2.0

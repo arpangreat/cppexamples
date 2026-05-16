@@ -21,25 +21,27 @@ int main() {
 
   void *fake_vt[] = {(void *)hijack_function};
 
-#if 1
+  std::cout << "=== Stack allocation test ===" << std::endl;
   Entity e;
-  Entity *p = &e;  // use pointer to prevent devirtualization
+  Entity *p = &e; // use pointer to prevent devirtualization
   p->activity();
   p->activity();
   p->activity();
-  *((void**)&e) = fake_vt;
+  *((void **)&e) = fake_vt;
   p->activity();
   p->activity();
   p->activity();
-#else
-  Entity *e = new Entity();
-  e->activity();
-  e->activity();
-  e->activity();
-  *(void **)e = fake_vt;
-  e->activity();
-  e->activity();
-  e->activity();
-#endif
+
+  std::cout << "\n=== Heap allocation test ===" << std::endl;
+  auto *e_heap = new Entity();
+  e_heap->activity();
+  e_heap->activity();
+  e_heap->activity();
+  *(void **)e_heap = fake_vt;
+  e_heap->activity();
+  e_heap->activity();
+  e_heap->activity();
+  delete e_heap;
+
   return 0;
 }
